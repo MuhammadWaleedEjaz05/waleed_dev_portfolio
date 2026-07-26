@@ -988,6 +988,11 @@ export default function App() {
     }
   }, []);
 
+  // Scroll to top on initial load
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Track active section on scroll
   useEffect(() => {
     const observer = new IntersectionObserver(
